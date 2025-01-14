@@ -3,13 +3,13 @@ LR=2e-2
 
 CUDA_VISIBLE_DEVICES=0 python3 main.py \
     --do_train \
-    --train_file /data/nfs/llm/data/AdvertiseGen/dev.json \
-    --validation_file /data/nfs/llm/data/AdvertiseGen/dev.json \
+    --train_file data/AdvertiseGen/dev.json \
+    --validation_file ata/AdvertiseGen/dev.json \
     --prompt_column content \
     --response_column summary \
     --overwrite_cache \
-    --model_name_or_path /data/nfs/llm/model/chatglm-6b \
-    --output_dir /home/guodong.li/output/adgen-chatglm-6b-pt-$PRE_SEQ_LEN-$LR \
+    --model_name_or_path /workspace/sy/disk/tester-volume/llm_model/chatglm-6b \
+    --output_dir output/adgen-chatglm-6b-pt-$PRE_SEQ_LEN-$LR \
     --overwrite_output_dir \
     --max_source_length 64 \
     --max_target_length 64 \
